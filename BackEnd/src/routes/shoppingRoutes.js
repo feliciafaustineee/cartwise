@@ -13,56 +13,12 @@ const {
   getCategories,
 } = require("../controllers/shoppingController");
 
-router.get(
-  "/categories/all",
-  authMiddleware,
-  getCategories
-);
-
-router.get(
-  "/",
-  authMiddleware,
-  getShoppingItems
-);
-
-router.post(
-  "/",
-  authMiddleware,
-  addShoppingItem
-);
-
-router.put(
-  "/:id",
-  authMiddleware,
-  updateShoppingQuantity
-);
-
-router.patch(
-  "/:id/purchased",
-  authMiddleware,
-  togglePurchasedStatus
-);
-
-router.delete("/:id", authMiddleware, deleteShoppingItem);
+router.get("/categories/all", authMiddleware, getCategories);
 router.get("/", authMiddleware, getShoppingItems);
 router.post("/", authMiddleware, addShoppingItem);
 
-router.put(
-  "/:id",
-  authMiddleware,
-  updateShoppingQuantity
-);
-
-router.patch(
-  "/:id/purchased",
-  authMiddleware,
-  togglePurchasedStatus
-);
-
-router.delete(
-  "/:id",
-  authMiddleware,
-  deleteShoppingItem
-);
+router.put("/:id", authMiddleware, updateShoppingQuantity);
+router.patch("/:id/purchased", authMiddleware, togglePurchasedStatus);
+router.delete("/:id", authMiddleware, deleteShoppingItem);
 
 module.exports = router;
