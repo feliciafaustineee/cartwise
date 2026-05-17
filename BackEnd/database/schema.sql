@@ -30,8 +30,8 @@ CREATE TABLE shopping_items (
     name VARCHAR(100) NOT NULL,
     quantity INTEGER NOT NULL
     CHECK (quantity BETWEEN 1 AND 1000),
-    estimated_price INTEGER NOT NULL
-    CHECK (estimated_price > 0),
+    price_per_unit INTEGER NOT NULL
+    CHECK (price_per_unit > 0),
     is_purchased BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
