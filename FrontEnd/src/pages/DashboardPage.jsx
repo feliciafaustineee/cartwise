@@ -1,5 +1,5 @@
 import { RiAddLine } from "react-icons/ri";
-import Sidebar from "../components/layout/Sidebar";
+import Sidebar from "../components/sidebar";
 import useDashboard from "../hooks/useDashboard";
 import { getGreeting } from "../utils/greeting";
 import { getUser } from "../services/authService";
