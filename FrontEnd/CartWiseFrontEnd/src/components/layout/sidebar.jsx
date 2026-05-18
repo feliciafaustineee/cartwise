@@ -1,16 +1,12 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import {MdDashboard, MdShoppingCart, MdInventory2, MdBarChart, MdSettings, MdNotificationsNone} from "react-icons/md";
+import {MdDashboard, MdAttachMoney, MdShoppingCart, MdInventory2, MdBarChart, MdSettings, MdNotificationsNone} from "react-icons/md";
 import { RiWallet3Fill } from "react-icons/ri";
 import { PiMoneyFill } from "react-icons/pi";
 
 const NAV_ITEMS = [
   { icon: MdDashboard,         label: "Dashboard",      path: "/dashboard"     },
   { icon: MdShoppingCart,      label: "Shopping List",  path: "/shopping"      },
-<<<<<<<< HEAD:FrontEnd/src/components/sidebar.jsx
   { icon: MdAttachMoney,       label: "Budget Tracker", path: "/budget-tracker"},
-========
-  { icon: PiMoneyFill,         label: "Budget Tracker", path: "/budget"        },
->>>>>>>> 7d0c65b (fix: benerin struktur folder agar SRP dan menghubungkan frontend dengan backend agar dapat mengambil data dari database untuk dashboard. Nambahin page dashboard):FrontEnd/CartWiseFrontEnd/src/components/layout/sidebar.jsx
   { icon: MdInventory2,        label: "Inventory",      path: "/inventory"     },
   { icon: MdBarChart,          label: "Reports",        path: "/reports"       },
   { icon: MdSettings,          label: "Settings",       path: "/settings"      },
