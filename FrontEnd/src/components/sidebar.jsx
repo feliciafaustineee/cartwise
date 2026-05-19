@@ -84,7 +84,6 @@ export default function Sidebar() {
         </div>
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold text-[#2D3335]">{name}</p>
-          <p className="text-[11px] text-[#5A6062]">Premium Plan</p>
         </div>
       </div>
     </aside>
