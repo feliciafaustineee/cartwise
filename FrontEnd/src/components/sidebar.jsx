@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { icon: MdInventory2,        label: "Inventory",      path: "/inventory"     },
   { icon: MdBarChart,          label: "Reports",        path: "/reports"       },
   { icon: MdSettings,          label: "Settings",       path: "/settings"      },
-  { icon: MdNotificationsNone, label: "Notifications",  path: "/notifications" },
+  { icon: MdNotificationsNone, label: "Notifications",  path: "/notification" },
 ];
 
 function SidebarItem({ icon: Icon, label, active, onClick }) {

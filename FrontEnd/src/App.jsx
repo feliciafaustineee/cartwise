@@ -5,6 +5,7 @@ import Dashboard from "./pages/DashboardPage";
 import BudgetTracker from "./pages/BudgetTracker";
 import Inventory from "./pages/Inventory";
 import Reports from "./pages/Reports";
+import Notification from "./pages/Notification";
 // import DashboardPage from "./pages/DashboardPage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/budget-tracker" element={<BudgetTracker />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/notification" element={<Notification />} />
         
         {/* <Route path="/dashboard" element={<DashboardPage />} /> */}
       </Routes>
