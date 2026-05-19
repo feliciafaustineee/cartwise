@@ -55,7 +55,7 @@ export default function Reports() {
   const items = data?.most_purchased_items ?? [];
 
   // Dummy trend per item (backend doesn't provide per-item trend yet)
-  const itemTrends = [0, 12, 0, -5];
+  // const itemTrends = [0, 12, 0, -5];
 
   return (
     <div className="flex h-screen bg-[#F5F6F0] overflow-hidden">
@@ -104,7 +104,7 @@ export default function Reports() {
           ) : (
             <>
               {/* Stat Cards */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-4 mb-8">
 
                 {/* Monthly Spending */}
                 <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 relative overflow-hidden">
@@ -119,12 +119,12 @@ export default function Reports() {
                     )}
                   </div>
                   {/* Decorative icon */}
-                  <div className="absolute right-4 bottom-3 opacity-10">
+                  {/* <div className="absolute right-4 bottom-3 opacity-10">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                       <circle cx="30" cy="30" r="28" stroke="#7E8E21" strokeWidth="3"/>
                       <path d="M20 40 L30 20 L40 40" stroke="#7E8E21" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Top Category */}
@@ -144,7 +144,7 @@ export default function Reports() {
                 </div>
 
                 {/* Savings Velocity */}
-                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6">
+                {/* <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6">
                   <p className="text-[10px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-3">Savings Velocity</p>
                   <div className="flex items-end gap-2">
                     <p className="text-3xl font-bold text-[#2D3335]">{formatRp(velocity < 0 ? spending * (1 + Math.abs(velocity)/100) : spending * (1 - velocity/100))}</p>
@@ -154,7 +154,7 @@ export default function Reports() {
                     </span>
                   </div>
                   <p className="text-xs text-[#9CA3AF] mt-1">v.s. last month</p>
-                </div>
+                </div> */}
               </div>
 
               {/* Most Purchased Items */}
@@ -172,7 +172,7 @@ export default function Reports() {
                   <span>Frequency</span>
                   <span>Avg. Price</span>
                   <span>Total Spent</span>
-                  <span>Trend</span>
+                  {/* <span>Trend</span> */}
                 </div>
 
                 {items.length === 0 ? (
@@ -203,7 +203,7 @@ export default function Reports() {
                       </span>
 
                       {/* Trend badge */}
-                      <TrendBadge value={itemTrends[i] ?? 0} />
+                      {/* <TrendBadge value={itemTrends[i] ?? 0} /> */}
                     </div>
                   ))
                 )}
