@@ -167,10 +167,7 @@ export default function ShoppingListPage() {
                       </div>
                       <div className="flex-1">
                         <p className="text-sm font-semibold text-[#2D3335]">{item.name}</p>
-                        <div className="mt-1 h-1.5 w-full rounded-full bg-gray-100">
-                          {/* stock is always 1 here, so bar is always at ~10% */}
-                          <div className="h-full w-[10%] rounded-full bg-red-400" />
-                        </div>
+                        
                       </div>
                     </div>
                   ))
