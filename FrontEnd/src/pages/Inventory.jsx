@@ -618,7 +618,7 @@ export default function InventoryManager() {
                 <div className="w-28">Quantity</div>
                 <div className="w-28 text-right">Expires</div>
                 <div className="w-24 text-right">Status</div>
-                <div className="w-8" />
+                <div className="w-18" />
               </div>
 
               {loading ? (
