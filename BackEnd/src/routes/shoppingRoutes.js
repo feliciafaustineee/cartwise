@@ -1,9 +1,5 @@
 const express = require("express");
-
-const router = express.Router();
-
 const authMiddleware = require("../middleware/authMiddleware");
-
 const {
   getShoppingItems,
   addShoppingItem,
@@ -13,14 +9,17 @@ const {
   getCategories,
   checkoutShoppingList,
 } = require("../controllers/shoppingController");
-
-router.get("/categories/all", authMiddleware, getCategories);
-router.get("/", authMiddleware, getShoppingItems);
-router.post("/", authMiddleware, addShoppingItem);
-router.post("/checkout", authMiddleware, checkoutShoppingList);
-
-router.put("/:id", authMiddleware, updateShoppingQuantity);
-router.patch("/:id/purchased", authMiddleware, togglePurchasedStatus);
-router.delete("/:id", authMiddleware, deleteShoppingItem);
-
+ 
+const router = express.Router();
+ 
+router.use(authMiddleware); // semua route butuh auth
+ 
+router.get("/categories/all", getCategories);
+router.get("/", getShoppingItems);
+router.post("/", addShoppingItem);
+router.post("/checkout", checkoutShoppingList);
+router.put("/:id", updateShoppingQuantity);
+router.patch("/:id/purchased", togglePurchasedStatus);
+router.delete("/:id", deleteShoppingItem);
+ 
 module.exports = router;

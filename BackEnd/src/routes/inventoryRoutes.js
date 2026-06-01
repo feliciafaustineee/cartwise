@@ -1,24 +1,19 @@
 const express = require("express");
-
-const router = express.Router();
-
 const authMiddleware = require("../middleware/authMiddleware");
-
 const {
   getInventoryItems,
   addInventoryItem,
   updateInventoryStock,
   deleteInventoryItem,
 } = require("../controllers/inventoryController");
-
-router.get(
-  "/",
-  authMiddleware,
-  getInventoryItems
-);
-
-router.post("/", authMiddleware, addInventoryItem);
-router.put("/:id", authMiddleware, updateInventoryStock);
-router.delete("/:id", authMiddleware, deleteInventoryItem);
-
+ 
+const router = express.Router();
+ 
+router.use(authMiddleware);
+ 
+router.get("/", getInventoryItems);
+router.post("/", addInventoryItem);
+router.put("/:id", updateInventoryStock);
+router.delete("/:id", deleteInventoryItem);
+ 
 module.exports = router;
